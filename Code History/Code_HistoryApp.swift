@@ -7,11 +7,14 @@
 
 import SwiftUI
 
-@main
-struct Code_HistoryApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+@main // entry point of the app
+struct Code_HistoryApp: App //  conforms to the App protocol =  structure and behavior of the app
+{
+    var body: some Scene
+    {
+        WindowGroup
+        {
+            ContentView() // lounch screen
         }
     }
 }
