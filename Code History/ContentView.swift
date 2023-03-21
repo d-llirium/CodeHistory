@@ -27,40 +27,46 @@ struct ContentView: View
         ZStack {
             mainColor.ignoresSafeArea()
             VStack { // vertical stack || pile
-                Text( "1 / 10" ).font( .callout ).multilineTextAlignment( .leading )
+                Text( "1 / 10" )
+                    .font( .callout ).multilineTextAlignment( .leading )
                     .padding()
                 Text(question.questionText)
                     .font(.largeTitle).bold().multilineTextAlignment( .leading )
                 Spacer() // occupies all the space where it is
                 HStack { // horizontal || Queeu line
-                    Button( action: { print( "Tapped on Choice 1" ) },
-                        label: {
-                        Text(question.possibleAnswers[0])
-                            .font(.body).bold().multilineTextAlignment(.center)
-                            .padding().border( accentColor, width: 4 )
-                        }
-                    )
-                    Button( action: { print( "Tapped on Choice 2" ) },
-                        label: {
-                        Text(question.possibleAnswers[1])
-                            .font(.body).bold().multilineTextAlignment(.center)
-                            .padding().border( accentColor, width: 4 )
-                        }
-                    )
-                    Button( action: { print( "Tapped on Choice 3" ) },
-                        label: {
-                        Text(question.possibleAnswers[2])
-                            .font(.body).bold().multilineTextAlignment(.center)
-                            .padding().border( accentColor, width: 4 )
-                        }
-                    )
-                    Button( action: { print( "Tapped on Choice 4" ) },
-                        label: {
-                        Text(question.possibleAnswers[0])
-                            .font(.body).bold().multilineTextAlignment(.center)
-                            .padding().border( accentColor, width: 4 )
-                        }
-                    )
+                    Button(
+                        action: {
+                            print( "Tapped on Choice 1" )
+                        }, label: {
+                            ChoiceTextView(
+                                choiceText: question.possibleAnswers[0]
+                            )
+                    })
+                    Button(
+                        action: {
+                            print( "Tapped on Choice 2" )
+                        }, label: {
+                            ChoiceTextView(
+                                choiceText: question.possibleAnswers[1]
+                            )
+                    })
+                    Button(
+                        action: {
+                            print( "Tapped on Choice 3" )
+                        }, label: {
+                            ChoiceTextView(
+                                choiceText: question.possibleAnswers[2]
+                            )
+                    })
+                    Button(
+                        action: {
+                            print( "Tapped on Choice 4" )
+                            
+                        }, label: {
+                            ChoiceTextView(
+                                choiceText: question.possibleAnswers[3]
+                            )
+                    })
                 }
             }
         }

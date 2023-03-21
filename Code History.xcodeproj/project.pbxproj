@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3527E629CA3DD5005C5F84 /* ChoiceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */; };
 		CE4F55D8298ED8D000681949 /* Code_HistoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F55D7298ED8D000681949 /* Code_HistoryApp.swift */; };
 		CE4F55DA298ED8D000681949 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F55D9298ED8D000681949 /* ContentView.swift */; };
 		CE4F55DC298ED8D200681949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4F55DB298ED8D200681949 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTextView.swift; sourceTree = "<group>"; };
 		CE4F55D4298ED8D000681949 /* Code History.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code History.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4F55D7298ED8D000681949 /* Code_HistoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code_HistoryApp.swift; sourceTree = "<group>"; };
 		CE4F55D9298ED8D000681949 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				CE4F55D7298ED8D000681949 /* Code_HistoryApp.swift */,
 				CE4F55D9298ED8D000681949 /* ContentView.swift */,
+				CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */,
 				CE5FC43229B1473C008BABB5 /* Queston.swift */,
 				CE4F55DB298ED8D200681949 /* Assets.xcassets */,
 				CE4F55DD298ED8D200681949 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				CE5FC43329B1473C008BABB5 /* Queston.swift in Sources */,
 				CE4F55DA298ED8D000681949 /* ContentView.swift in Sources */,
+				CE3527E629CA3DD5005C5F84 /* ChoiceTextView.swift in Sources */,
 				CE4F55D8298ED8D000681949 /* Code_HistoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
