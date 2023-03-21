@@ -29,31 +29,36 @@ struct ContentView: View
             VStack { // vertical stack || pile
                 Text( "1 / 10" ).font( .callout ).multilineTextAlignment( .leading )
                     .padding()
-                Text(question.questionText).font(.largeTitle).bold().multilineTextAlignment( .leading )
+                Text(question.questionText)
+                    .font(.largeTitle).bold().multilineTextAlignment( .leading )
                 Spacer() // occupies all the space where it is
                 HStack { // horizontal || Queeu line
                     Button( action: { print( "Tapped on Choice 1" ) },
                         label: {
-                        Text(question.possibleAnswers[0]).font(.body).bold().multilineTextAlignment(.center)
-                                .padding().border( accentColor, width: 4 )
+                        Text(question.possibleAnswers[0])
+                            .font(.body).bold().multilineTextAlignment(.center)
+                            .padding().border( accentColor, width: 4 )
                         }
                     )
                     Button( action: { print( "Tapped on Choice 2" ) },
                         label: {
-                        Text(question.possibleAnswers[1]).font(.body).bold().multilineTextAlignment(.center)
-                                .padding().border( accentColor, width: 4 )
+                        Text(question.possibleAnswers[1])
+                            .font(.body).bold().multilineTextAlignment(.center)
+                            .padding().border( accentColor, width: 4 )
                         }
                     )
                     Button( action: { print( "Tapped on Choice 3" ) },
                         label: {
-                        Text(question.possibleAnswers[2]).font(.body).bold().multilineTextAlignment(.center)
-                                .padding().border( accentColor, width: 4 )
+                        Text(question.possibleAnswers[2])
+                            .font(.body).bold().multilineTextAlignment(.center)
+                            .padding().border( accentColor, width: 4 )
                         }
                     )
                     Button( action: { print( "Tapped on Choice 4" ) },
                         label: {
-                        Text(question.possibleAnswers[0]).font(.body).bold().multilineTextAlignment(.center)
-                                .padding().border( accentColor, width: 4 )
+                        Text(question.possibleAnswers[0])
+                            .font(.body).bold().multilineTextAlignment(.center)
+                            .padding().border( accentColor, width: 4 )
                         }
                     )
                 }
