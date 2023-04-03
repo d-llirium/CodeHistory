@@ -16,7 +16,8 @@ struct ContentView: View
         possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"],
         correctAnswerIndex: 2
     )
-    let mainColor = Color( // for background
+    // @State = This variable can change. Update the screen if it does
+    @State var mainColor = Color( // for background
         red: 20/255, green: 28/255, blue: 58/255
     )
     let accentColor = Color( // for borders
@@ -39,6 +40,7 @@ struct ContentView: View
                         Button(
                             action: {
                                 print( "Tapped: \(question.possibleAnswers[answerIndex])" )
+                                mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
                             }, label: {
                                 ChoiceTextView(
                                     choiceText: question.possibleAnswers[answerIndex]
