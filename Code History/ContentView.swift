@@ -34,39 +34,17 @@ struct ContentView: View
                     .font(.largeTitle).bold().multilineTextAlignment( .leading )
                 Spacer() // occupies all the space where it is
                 HStack { // horizontal || Queeu line
-                    Button(
-                        action: {
-                            print( "Tapped on Choice 1" )
-                        }, label: {
-                            ChoiceTextView(
-                                choiceText: question.possibleAnswers[0]
-                            )
-                    })
-                    Button(
-                        action: {
-                            print( "Tapped on Choice 2" )
-                        }, label: {
-                            ChoiceTextView(
-                                choiceText: question.possibleAnswers[1]
-                            )
-                    })
-                    Button(
-                        action: {
-                            print( "Tapped on Choice 3" )
-                        }, label: {
-                            ChoiceTextView(
-                                choiceText: question.possibleAnswers[2]
-                            )
-                    })
-                    Button(
-                        action: {
-                            print( "Tapped on Choice 4" )
-                            
-                        }, label: {
-                            ChoiceTextView(
-                                choiceText: question.possibleAnswers[3]
-                            )
-                    })
+                    ForEach( 0 ..< question.possibleAnswers.count, id: \.self ) { answerIndex in
+                      // Define the view that will be returned for each index
+                        Button(
+                            action: {
+                                print( "Tapped: \(question.possibleAnswers[answerIndex])" )
+                            }, label: {
+                                ChoiceTextView(
+                                    choiceText: question.possibleAnswers[answerIndex]
+                                )
+                        })
+                    }
                 }
             }
         }
