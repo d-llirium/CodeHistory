@@ -36,7 +36,7 @@ struct ContentView: View
                 Spacer() // occupies all the space where it is
                 HStack { // horizontal || Queeu line
                     ForEach( 0 ..< question.possibleAnswers.count, id: \.self ) { answerIndex in
-                      // Define the view that will be returned for each index
+                        // Define the view that will be returned for each index
                         Button(
                             action: {
                                 print( "Tapped: \(question.possibleAnswers[answerIndex])" )
@@ -45,7 +45,8 @@ struct ContentView: View
                                 ChoiceTextView(
                                     choiceText: question.possibleAnswers[answerIndex]
                                 )
-                        })
+                            }
+                        )
                     }
                 }
             }

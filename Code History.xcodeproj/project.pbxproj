@@ -12,6 +12,7 @@
 		CE4F55DA298ED8D000681949 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F55D9298ED8D000681949 /* ContentView.swift */; };
 		CE4F55DC298ED8D200681949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4F55DB298ED8D200681949 /* Assets.xcassets */; };
 		CE4F55DF298ED8D200681949 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4F55DE298ED8D200681949 /* Preview Assets.xcassets */; };
+		CE5DA41D29E46FE000874CF1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA41C29E46FE000874CF1 /* Game.swift */; };
 		CE5FC43329B1473C008BABB5 /* Queston.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FC43229B1473C008BABB5 /* Queston.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		CE4F55D9298ED8D000681949 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE4F55DB298ED8D200681949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4F55DE298ED8D200681949 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE5DA41C29E46FE000874CF1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CE5FC43229B1473C008BABB5 /* Queston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queston.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				CE4F55D7298ED8D000681949 /* Code_HistoryApp.swift */,
-				CE4F55D9298ED8D000681949 /* ContentView.swift */,
-				CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */,
-				CE5FC43229B1473C008BABB5 /* Queston.swift */,
+				CE5DA41F29E4702600874CF1 /* Views */,
+				CE5DA41E29E4700400874CF1 /* Models */,
 				CE4F55DB298ED8D200681949 /* Assets.xcassets */,
 				CE4F55DD298ED8D200681949 /* Preview Content */,
 			);
@@ -71,6 +72,24 @@
 				CE4F55DE298ED8D200681949 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE5DA41E29E4700400874CF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE5FC43229B1473C008BABB5 /* Queston.swift */,
+				CE5DA41C29E46FE000874CF1 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE5DA41F29E4702600874CF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F55D9298ED8D000681949 /* ContentView.swift */,
+				CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5FC43329B1473C008BABB5 /* Queston.swift in Sources */,
+				CE5DA41D29E46FE000874CF1 /* Game.swift in Sources */,
 				CE4F55DA298ED8D000681949 /* ContentView.swift in Sources */,
 				CE3527E629CA3DD5005C5F84 /* ChoiceTextView.swift in Sources */,
 				CE4F55D8298ED8D000681949 /* Code_HistoryApp.swift in Sources */,
