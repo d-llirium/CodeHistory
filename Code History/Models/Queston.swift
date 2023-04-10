@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question {
+struct Question: Hashable { // Hashable protocol: to use Question a a key for a Dictionary
     let questionText: String
     let possibleAnswers: [String]
     let correctAnswerIndex: Int
