@@ -15,6 +15,7 @@
 		CE5DA41D29E46FE000874CF1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DA41C29E46FE000874CF1 /* Game.swift */; };
 		CE5FC43329B1473C008BABB5 /* Queston.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FC43229B1473C008BABB5 /* Queston.swift */; };
 		CE658A3B29E87C31000313E6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE658A3A29E87C31000313E6 /* WelcomeView.swift */; };
+		CE658A3D29E88437000313E6 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE658A3C29E88437000313E6 /* GameColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CE5DA41C29E46FE000874CF1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CE5FC43229B1473C008BABB5 /* Queston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queston.swift; sourceTree = "<group>"; };
 		CE658A3A29E87C31000313E6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		CE658A3C29E88437000313E6 /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				CE4F55D9298ED8D000681949 /* GameView.swift */,
 				CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */,
 				CE658A3A29E87C31000313E6 /* WelcomeView.swift */,
+				CE658A3C29E88437000313E6 /* GameColor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				CE658A3B29E87C31000313E6 /* WelcomeView.swift in Sources */,
 				CE5DA41D29E46FE000874CF1 /* Game.swift in Sources */,
 				CE4F55DA298ED8D000681949 /* GameView.swift in Sources */,
+				CE658A3D29E88437000313E6 /* GameColor.swift in Sources */,
 				CE3527E629CA3DD5005C5F84 /* ChoiceTextView.swift in Sources */,
 				CE4F55D8298ED8D000681949 /* Code_HistoryApp.swift in Sources */,
 			);

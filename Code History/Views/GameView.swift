@@ -20,9 +20,6 @@ struct GameView: View
     @State var mainColor = Color( // for background
         red: 20/255, green: 28/255, blue: 58/255
     )
-    let accentColor = Color( // for borders
-        red: 48/255, green: 105/255, blue: 240/255
-    )
     var body: some View
     {
         ZStack {
