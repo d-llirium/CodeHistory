@@ -14,7 +14,7 @@ struct Code_HistoryApp: App //  conforms to the App protocol =  structure and be
     {
         WindowGroup
         {
-            ContentView() // lounch screen
+            WelcomeView() // launch screen
         }
     }
 }
