@@ -9,7 +9,7 @@
  */
 import SwiftUI
 
-struct ContentView: View
+struct GameView: View
 {
     let question = Question(
         questionText: "What was the first computer bug?",
@@ -60,6 +60,6 @@ struct ContentView: View
  */
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GameView()
     }
 }
