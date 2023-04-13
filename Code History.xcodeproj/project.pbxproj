@@ -92,11 +92,11 @@
 		CE5DA41F29E4702600874CF1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE658A3A29E87C31000313E6 /* WelcomeView.swift */,
 				CE4F55D9298ED8D000681949 /* GameView.swift */,
 				CE3527E529CA3DD5005C5F84 /* ChoiceTextView.swift */,
-				CE658A3A29E87C31000313E6 /* WelcomeView.swift */,
-				CE658A3C29E88437000313E6 /* GameColor.swift */,
 				CE658A3E29E885C7000313E6 /* BottomTextView.swift */,
+				CE658A3C29E88437000313E6 /* GameColor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

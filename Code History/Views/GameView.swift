@@ -17,9 +17,7 @@ struct GameView: View
         correctAnswerIndex: 2
     )
     // @State = This variable can change. Update the screen if it does
-    @State var mainColor = Color( // for background
-        red: 20/255, green: 28/255, blue: 58/255
-    )
+    @State var mainColor = GameColor.main
     var body: some View
     {
         ZStack {
@@ -37,7 +35,7 @@ struct GameView: View
                         Button(
                             action: {
                                 print( "Tapped: \(question.possibleAnswers[answerIndex])" )
-                                mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
+                                mainColor = answerIndex == question.correctAnswerIndex ? GameColor.correctGuess : GameColor.incorrectGuess
                             }, label: {
                                 ChoiceTextView(
                                     choiceText: question.possibleAnswers[answerIndex]
