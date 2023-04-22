@@ -11,12 +11,8 @@ import SwiftUI
 
 struct GameView: View
 {
-    let question = Question(
-        questionText: "What was the first computer bug?",
-        possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"],
-        correctAnswerIndex: 2
-    )
     @StateObject var viewModel = GameViewModel()
+    
     var body: some View
     {
         ZStack {
@@ -25,23 +21,7 @@ struct GameView: View
                 Text( viewModel.questionProgressText )
                     .font( .callout ).multilineTextAlignment( .leading )
                     .padding()
-                Text(question.questionText)
-                    .font(.largeTitle).bold().multilineTextAlignment( .leading )
-                Spacer() // occupies all the space where it is
-                HStack { // horizontal || Queeu line
-                    ForEach( 0 ..< question.possibleAnswers.count, id: \.self ) { answerIndex in
-                        // Define the view that will be returned for each index
-                        Button(
-                            action: {
-                                print( "Tapped: \(question.possibleAnswers[answerIndex])" )
-                            }, label: {
-                                ChoiceTextView(
-                                    choiceText: question.possibleAnswers[answerIndex]
-                                )
-                            }
-                        )
-                    }
-                }
+                QuestionView( question: viewModel.currentQuestion )
             }
         }
         .foregroundColor( .white )
