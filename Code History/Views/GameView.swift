@@ -16,14 +16,13 @@ struct GameView: View
         possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"],
         correctAnswerIndex: 2
     )
-    // @State = This variable can change. Update the screen if it does
-    @State var mainColor = GameColor.main
+    @StateObject var viewModel = GameViewModel()
     var body: some View
     {
         ZStack {
-            mainColor.ignoresSafeArea()
+            GameColor.main.ignoresSafeArea() // background color will always be the main color from GameColor struct and won’t change when the user makes a guessz
             VStack { // vertical stack || pile
-                Text( "1 / 10" )
+                Text( viewModel.questionProgressText )
                     .font( .callout ).multilineTextAlignment( .leading )
                     .padding()
                 Text(question.questionText)
@@ -35,7 +34,6 @@ struct GameView: View
                         Button(
                             action: {
                                 print( "Tapped: \(question.possibleAnswers[answerIndex])" )
-                                mainColor = answerIndex == question.correctAnswerIndex ? GameColor.correctGuess : GameColor.incorrectGuess
                             }, label: {
                                 ChoiceTextView(
                                     choiceText: question.possibleAnswers[answerIndex]
