@@ -27,6 +27,15 @@ struct GameView: View
         .foregroundColor( .white )
         .navigationBarHidden(true) // hide the navigation bar
         .environmentObject(viewModel) // if any value changes, if will re render QuestionView on this view
+        .background(
+            NavigationLink( // use the gameIsOver property to navigate to the final view that displays the quiz results
+                destination: Text( "Game Over!" ),
+                isActive: .constant( viewModel.gameIsOver ),
+                label: {
+                    EmptyView()
+                }
+            )
+        )
     }
 }
 
