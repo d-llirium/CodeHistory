@@ -22,7 +22,6 @@ struct ScoreView: View {
                 VStack {
                     HStack {
                         Text("???")
-                            .font( .system( size: 30) )
                         Image(systemName: "checkmark.square.fill")
                             .font(Font.system(size: 30, weight: .bold))
                             .symbolRenderingMode(.palette)
@@ -30,13 +29,13 @@ struct ScoreView: View {
                     }
                     HStack {
                         Text("???")
-                            .font( .system( size: 30) )
                         Image(systemName: "xmark")
                             .font(Font.system(size: 30, weight: .bold))
                             .symbolRenderingMode(.monochrome)
                             .foregroundColor(GameColor.incorrectGuess)
                     }
-                }
+                }.font( .system( size: 30) )
+
                 
                 Spacer()
                 NavigationLink(
