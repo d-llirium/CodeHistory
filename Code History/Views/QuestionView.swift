@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var viewModel: GameViewModel
     let question: Question
     
     var body: some View {
@@ -20,7 +21,8 @@ struct QuestionView: View {
                     // Define the view that will be returned for each index
                     Button(
                         action: {
-                            print( "Tapped: \(question.possibleAnswers[answerIndex])" )
+                            print( "Tapped on option with the text: \(question.possibleAnswers[ answerIndex ])" )
+                            viewModel.makeGuess( atIndex: answerIndex ) // Update the button’s action configuration to tell the view model that a guess was made.
                         }, label: {
                             ChoiceTextView(
                                 choiceText: question.possibleAnswers[answerIndex]
@@ -28,6 +30,12 @@ struct QuestionView: View {
                         }
                     )
                 }
+            }
+            if viewModel.guessWasMade { // add a button to the bottom of the view if a guess was made
+                Button(
+                    action: { viewModel.displayNextScreen() },
+                    label: { BottomTextView( str: "Next" ) }
+                )
             }
         }
     }

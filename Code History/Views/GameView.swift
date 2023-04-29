@@ -25,6 +25,7 @@ struct GameView: View
             }
         }
         .foregroundColor( .white )
+        .environmentObject(viewModel) // if any value changes, if will re render QuestionView on this view
     }
 }
 
