@@ -25,6 +25,7 @@ struct GameView: View
             }
         }
         .foregroundColor( .white )
+        .navigationBarHidden(true) // hide the navigation bar
         .environmentObject(viewModel) // if any value changes, if will re render QuestionView on this view
     }
 }
