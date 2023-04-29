@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 // 1 An ObservableObject is always a reference type (class) and informs SwiftUI whenever one of its @Published properties will change
 class GameViewModel: ObservableObject {
     
@@ -35,5 +36,22 @@ class GameViewModel: ObservableObject {
     }
     func displayNextScreen() {
         game.updateGameStatus()
+    }
+    func color(
+        forOptionIndex optionIndex: Int
+    ) -> Color {
+        if let guessedIndex = game.guesses[ currentQuestion ] { // conditional binding
+            if guessedIndex != optionIndex {
+                return GameColor.main
+                
+            } else if guessedIndex == currentQuestion.correctAnswerIndex {
+                return GameColor.correctGuess
+                
+            } else {
+                return GameColor.incorrectGuess
+            }
+        } else {
+            return GameColor.main
+        }
     }
 }

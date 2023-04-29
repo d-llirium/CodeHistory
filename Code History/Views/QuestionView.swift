@@ -26,7 +26,9 @@ struct QuestionView: View {
                         }, label: {
                             ChoiceTextView(
                                 choiceText: question.possibleAnswers[answerIndex]
-                            )
+                            ).background( // set the background color with the color calculated by the viewModel.
+                                viewModel.color( forOptionIndex: answerIndex )
+                            ).disabled( viewModel.guessWasMade ) // disable the buttons after a guess is made
                         }
                     )
                 }
