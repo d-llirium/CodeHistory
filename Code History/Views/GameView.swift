@@ -29,7 +29,12 @@ struct GameView: View
         .environmentObject(viewModel) // if any value changes, if will re render QuestionView on this view
         .background(
             NavigationLink( // use the gameIsOver property to navigate to the final view that displays the quiz results
-                destination: Text( "Game Over!" ),
+                destination: ScoreView(
+                    viewModel: ScoreViewModel(
+                        correctGuesses: viewModel.correctGuesses,
+                        incorrectGuesses: viewModel.incorrectGuesses
+                    )
+                ),
                 isActive: .constant( viewModel.gameIsOver ),
                 label: {
                     EmptyView()
